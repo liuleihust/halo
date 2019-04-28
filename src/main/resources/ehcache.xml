@@ -1,0 +1,91 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         updateCheck="false">
+
+    <defaultCache
+            <!--设置对象是否永久有效，一旦设置了，timeout 将不起作用-->
+            eternal="false"
+            <!--缓存最大个数-->
+            maxElementsInMemory="1000"
+            <!--当内存中的对象数量达到 maxElementsInMemeory 时，Ehcache 是否将对象写入磁盘-->
+            overflowToDisk="false"
+            <!--是否缓存虚拟机重启期数据-->
+            diskPersistent="false"
+            <!--设置对象在失效前的允许闲置时间，当设置为0时，可闲置时间无穷大-->
+            timeToIdleSeconds="0"
+            <!--设置对象在失效前允许存活时间，最大时间介于创建时间和失效时间之间-->
+            timeToLiveSeconds="600"
+            <!--当达到maxElementsInMemory限制时，Ehcache将会根据指定的策略去清理内存。默认策略是LRU（最近最少使用）。-->
+            memoryStoreEvictionPolicy="LRU"/>
+
+    <cache
+            <!--缓存名称-->
+            name="links"
+            eternal="false"
+            maxElementsInMemory="100"
+            overflowToDisk="false"
+            diskPersistent="false"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="300"
+            memoryStoreEvictionPolicy="LRU"/>
+
+    <cache
+            name="menus"
+            eternal="false"
+            maxElementsInMemory="20"
+            overflowToDisk="false"
+            diskPersistent="false"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="300"
+            memoryStoreEvictionPolicy="LRU"/>
+
+    <cache
+            name="posts"
+            eternal="false"
+            maxElementsInMemory="1000"
+            overflowToDisk="false"
+            diskPersistent="false"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="300"
+            memoryStoreEvictionPolicy="LRU"/>
+
+    <cache
+            name="comments"
+            eternal="false"
+            maxElementsInMemory="1000"
+            overflowToDisk="false"
+            diskPersistent="false"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="300"
+            memoryStoreEvictionPolicy="LRU"/>
+
+    <cache
+            name="attachments"
+            eternal="false"
+            maxElementsInMemory="1000"
+            overflowToDisk="false"
+            diskPersistent="false"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="300"
+            memoryStoreEvictionPolicy="LRU"/>
+
+    <cache
+            name="galleries"
+            eternal="false"
+            maxElementsInMemory="100"
+            overflowToDisk="false"
+            diskPersistent="false"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="300"
+            memoryStoreEvictionPolicy="LRU"/>
+
+    <cache
+            name="tags"
+            eternal="false"
+            maxElementsInMemory="100"
+            overflowToDisk="false"
+            diskPersistent="false"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="300"
+            memoryStoreEvictionPolicy="LRU"/>
+</ehcache>
